@@ -1,0 +1,17 @@
+<div class="mx-auto max-w-2xl p-6 space-y-6">
+     <h1 class="">Days Until Holiday</h1>
+     <.simple_form for={%{}} phx-submit="calculate" class="space-y-4">
+          <div>
+               <label for=""></label>
+               <select name="holiday" phx-change="select" class="">
+                    <%= for h <- @holidays do %>
+                    <option value={h.name} selected={@selected == h.name}>
+                         <%= h.name %> - <%= h.date %>
+                    </option>
+               </select>
+          </div>
+          <.button type="submit">Calculate & Save</.button>
+     </.simple_form>
+
+     
+</div>
